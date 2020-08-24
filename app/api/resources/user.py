@@ -58,7 +58,7 @@ class UserList(Resource):
         available_to_mentor. The current user's details are not returned.
         """
         user_id = get_jwt_identity()
-        return DAO.list_users(user_id, request.args.get("search", ""), request.args.get("need_mentoring", None), request.args.get("available_to_mentor", None))
+        return DAO.list_users(user_id, request.args.get("search", ""), request.args.get("need_mentoring", False), request.args.get("available_to_mentor", False))
 
 
 @users_ns.route("users/<int:user_id>")
@@ -242,7 +242,7 @@ class VerifiedUser(Resource):
         available_to_mentor. The current user's details are not returned.
         """
         user_id = get_jwt_identity()
-        return DAO.list_users(user_id, request.args.get("search", ""), request.args.get("need_mentoring", None), request.args.get("available_to_mentor", None), is_verified=True)
+        return DAO.list_users(user_id, request.args.get("search", ""), request.args.get("need_mentoring", False), request.args.get("available_to_mentor", False), is_verified=True)
 
 
 @users_ns.route("register")

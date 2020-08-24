@@ -740,14 +740,14 @@
                     {
                         "name": "need_mentoring",
                         "in": "query",
-                        "type": "string",
+                        "type": "boolean",
                         "required": false,
                         "description": "Flag for needing mentoring"
                     },
                     {
                         "name": "available_to_mentor",
                         "in": "query",
-                        "type": "string",
+                        "type": "boolean",
                         "required": false,
                         "description": "Flag for availability to mentor"
                     },
@@ -790,14 +790,14 @@
                     {
                         "name": "need_mentoring",
                         "in": "query",
-                        "type": "string",
+                        "type": "boolean",
                         "required": false,
                         "description": "Flag for needing mentoring"
                     },
                     {
                         "name": "available_to_mentor",
                         "in": "query",
-                        "type": "string",
+                        "type": "boolean",
                         "required": false,
                         "description": "Flag for availability to mentor"
                     },
