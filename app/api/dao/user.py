@@ -166,7 +166,7 @@ class UserDAO:
                 lambda user: (not is_verified or user.is_email_verified)
                 and (search_query.lower() in user.name.lower())
                 and (need_mentoring == False or (need_mentoring == True and user.need_mentoring))
-                and (available_to_mentor == False or (available_to_mentor == True and user.available_to_mentor))
+                and (available_to_mentor == False or (available_to_mentor == True and user.available_to_mentor)),
                 users_list,
             )
         ]
